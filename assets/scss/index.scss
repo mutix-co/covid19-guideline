@@ -1,0 +1,89 @@
+@import "./general";
+@import "./header";
+@import "./button";
+
+.header {
+  background: #f6f6f6;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 90px;
+    background-image: url(~/assets/images/header-bg.png);
+  }
+}
+
+.logo {
+  text-align: center;
+
+  & img {
+    width: 499px;
+    max-width: 100%;
+  }
+}
+
+.enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.enter--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter--button {
+  width: 376px;
+  height: 111px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px 16px 0;
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: $text;
+  margin-top: 60px;
+
+  background-image: url(~/assets/images/enter__button.png);
+  
+  &:hover {
+    background-image: url(~/assets/images/enter__button--hover.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) { 
+  .header {
+    &::after {
+      background-image: url(~/assets/images/header-bg@2x.png);
+    }
+  }
+
+  .enter--button {
+    background-image: url(~/assets/images/enter__button@2x.png);
+    
+    &:hover {
+      background-image: url(~/assets/images/enter__button--hover@2x.png);
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 4) { 
+  .header {
+    &::after {
+      background-image: url(~/assets/images/header-bg@4x.png);
+    }
+  }
+
+  .enter--button {
+    background-image: url(~/assets/images/enter__button@4x.png);
+    
+    &:hover {
+      background-image: url(~/assets/images/enter__button--hover@4x.png);
+    }
+  }
+}
