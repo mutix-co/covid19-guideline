@@ -1,0 +1,117 @@
+@import "./general";
+@import "./header";
+@import "./button";
+
+.header {
+  background: #f6f6f6;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 90px;
+    background-size: 142px 90px;
+    background-image: url(~/assets/images/header-bg.png);
+
+    @media (-webkit-min-device-pixel-ratio: 2) { 
+      background-image: url(~/assets/images/header-bg@2x.png);
+    }
+    
+    @media (-webkit-min-device-pixel-ratio: 4) { 
+      background-image: url(~/assets/images/header-bg@4x.png);
+    }
+  }
+}
+
+.logo {
+  text-align: center;
+
+  & img {
+    width: 100%;
+    max-width: 499px;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      max-width: 281px;
+    }
+  }
+}
+
+
+.enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+.enter--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 510px;
+  max-width: 100%;
+}
+
+.enter--image {
+  width: 100%;
+
+  @media (max-width: $screen-sm) { 
+    display: none;
+  }
+
+  &.enter--image__mobile {
+    width: 100%;
+    max-width: 309px;
+    display: inline-block;
+
+    @media (min-width: $screen-sm + 0.5) { 
+      display: none;
+    }
+  }
+}
+
+.enter--button {
+  width: 100%;
+  height: 111px;
+  max-width: 376px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px 16px 0;
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: $text;
+  margin-top: 60px;
+
+  @media (max-width: $screen-sm) { 
+    max-width: 302px;
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  background-size: 100% 100%;
+  background-image: url(~/assets/images/enter__button.png);
+  
+  &:hover {
+    background-image: url(~/assets/images/enter__button--hover.png);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2) { 
+    background-image: url(~/assets/images/enter__button@2x.png);
+    
+    &:hover {
+      background-image: url(~/assets/images/enter__button--hover@2x.png);
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 4) { 
+    background-image: url(~/assets/images/enter__button@4x.png);
+    
+    &:hover {
+      background-image: url(~/assets/images/enter__button--hover@4x.png);
+    }
+  }
+}

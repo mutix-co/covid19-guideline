@@ -1,0 +1,37 @@
+@import "./general";
+@import "./header";
+@import "./button";
+
+.aboutus--title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.aboutus--description {
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+}
+
+.aboutus--image {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  width: 682px;
+}
+
+.team {
+  margin-top: 300px;
+}
+
+.team--title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+}
+
+.team--detail {
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+}

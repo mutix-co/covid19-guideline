@@ -1,0 +1,99 @@
+@import "./general";
+@import "./header";
+@import "./button";
+
+.guideline--image {
+  width: 100%;
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #54a4d6;
+  text-align: center;
+  padding: 70px 30px;
+
+  .case--title__en {
+    font-weight: 300;
+    font-size: 1.875rem;
+  }
+
+  .case--title {
+    font-weight: bold;
+    font-size: 3.125rem;
+    padding: 1rem;
+  }
+
+  .case--button {
+    width: 100%;
+    height: 74px;
+    max-width: 901px;
+    background: $white;
+    color: $black;
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1.875rem;
+
+    @media (max-width: $screen-xl) { 
+      font-size: 0.8125rem;
+    }
+  }
+}
+
+.footer--bar {
+  height: 202px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+
+  @media (max-width: $screen-xl) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+.footer--logo {
+  width: 499px;
+
+  @media (max-width: $screen-xl) { 
+    width: 216px;
+  }
+}
+
+.copyright {
+  text-align: right;
+
+  @media (max-width: $screen-xl) { 
+    text-align: center;
+  }
+
+  .copyright--title {
+    font-weight: bold;
+    font-size: 2.19rem;
+
+    @media (max-width: $screen-xl) { 
+      font-size: 1.3rem;
+    }
+  }
+
+  .copyright--email {
+    font-weight: normal;
+    font-size: 1.25rem;
+
+    @media (max-width: $screen-xl) { 
+      font-size: 1rem;
+    }
+  }
+}
+
+.guideline-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.125rem;
+}
