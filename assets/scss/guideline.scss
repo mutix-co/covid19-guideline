@@ -6,6 +6,39 @@
   width: 100%;
 }
 
+.communicate {
+  counter-increment: communicate;
+
+  .communicate-title {
+    height: 193px;
+    background: #EAD65E;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 3.125rem;
+    line-height: 68px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 165px;
+
+    &::before {
+      content: counter(communicate);
+      background: #000000;
+      font-size: 1.125rem;
+      color: #fff;
+      border-radius: 100%;
+      width: 76px;
+      height: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 100px;
+    }
+  }
+}
+
 .case {
   display: flex;
   flex-direction: column;
