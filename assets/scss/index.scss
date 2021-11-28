@@ -2,25 +2,32 @@
 @import "./header";
 @import "./button";
 
-.header {
-  background: #f6f6f6;
+body {
+  padding: 135px 0 0;
 
   &::after {
     content: "";
-    display: block;
-    width: 100vw;
-    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 210px;
+    background: #f6f6f6 url(~/assets/images/header-bg.png) repeat-x;
+    background-position: top 135px center;
     background-size: 142px 90px;
-    background-image: url(~/assets/images/header-bg.png);
 
-    @media (-webkit-min-device-pixel-ratio: 2) { 
+    @media (-webkit-min-device-pixel-ratio: 2) {
       background-image: url(~/assets/images/header-bg@2x.png);
     }
-    
-    @media (-webkit-min-device-pixel-ratio: 4) { 
+
+    @media (-webkit-min-device-pixel-ratio: 4) {
       background-image: url(~/assets/images/header-bg@4x.png);
     }
   }
+}
+
+.header {
+  padding: 36px 0;
 }
 
 .logo {
@@ -58,7 +65,7 @@
 .enter--image {
   width: 100%;
 
-  @media (max-width: $screen-sm) { 
+  @media (max-width: $screen-sm) {
     display: none;
   }
 
@@ -67,7 +74,7 @@
     max-width: 309px;
     display: inline-block;
 
-    @media (min-width: $screen-sm + 0.5) { 
+    @media (min-width: #{$screen-sm + 0.5px}) {
       display: none;
     }
   }
@@ -86,7 +93,7 @@
   color: $text;
   margin-top: 60px;
 
-  @media (max-width: $screen-sm) { 
+  @media (max-width: $screen-sm) {
     max-width: 302px;
     font-size: 1.5rem;
     margin-top: 30px;
@@ -94,22 +101,22 @@
 
   background-size: 100% 100%;
   background-image: url(~/assets/images/enter__button.png);
-  
+
   &:hover {
     background-image: url(~/assets/images/enter__button--hover.png);
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2) { 
+  @media (-webkit-min-device-pixel-ratio: 2) {
     background-image: url(~/assets/images/enter__button@2x.png);
-    
+
     &:hover {
       background-image: url(~/assets/images/enter__button--hover@2x.png);
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 4) { 
+  @media (-webkit-min-device-pixel-ratio: 4) {
     background-image: url(~/assets/images/enter__button@4x.png);
-    
+
     &:hover {
       background-image: url(~/assets/images/enter__button--hover@4x.png);
     }

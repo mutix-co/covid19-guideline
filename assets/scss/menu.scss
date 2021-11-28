@@ -2,9 +2,23 @@
   display: none;
 }
 
-.menu--button {
-  #menu:checked ~ & {
-    display: none;
+.menu {
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    img {
+      height: 36px;
+      margin: auto;
+
+      @media (min-width: $screen-md) {
+        width: 48px;
+        height: 48px;
+      }
+    }
   }
 }
 
@@ -12,47 +26,88 @@
   display: none;
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  z-index: 100;
   width: 100%;
   height: 100%;
+  padding: 36px 0;
   background: $white;
-  padding-top: 36px;
-  z-index: 99;
+  overflow-y: auto;
 
   #menu:checked ~ & {
     display: block;
   }
 }
 
-.menu--button-icon {
-  width: 36px;
-  height: 36px;
+.menu-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  label {
+    margin-right: 35px;
+  }
 }
 
 .menu--logo {
-  margin-left: 38px;
-}
+  width: 280px;
+  max-width: 100%;
+  margin: 10px;
 
-.menu-bar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @media (min-width: $screen-md) {
+    width: 480px;
+    margin: 0;
+  }
 }
 
 .menu--nav {
-  margin-left: 74px;
-  margin-top: 40px;
+  width: 80%;
+  min-width: 275px;
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 80px 0 30px;
 
-  & li {
-    width: 1310px;
-    padding: 40px 20px 40px 0;
+
+  @media (min-width: $screen-md) {
+    margin: 40px 0 0 80px;
   }
- 
-  & a {
-    font-size: 4.5rem;
-    color: black;
-    border-bottom: 1px solid #000000;
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    font-size: 24px;
+    border-bottom: 1px solid;
+
+    @media (min-width: $screen-sm) {
+      height: 84px;
+      font-size: 28px;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 125px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 185px;
+      font-size: 72px;
+    }
+
+    &:hover {
+      filter: drop-shadow(5px 5px $yellow);
+    }
+
+    &::after {
+      content: "";
+      width: 0.8em;
+      height: 1.2em;
+      margin: 0 0 0 auto;
+      background: url("~/assets/images/icons/arrow-right.svg") no-repeat;
+      background-size: contain;
+    }
   }
 }

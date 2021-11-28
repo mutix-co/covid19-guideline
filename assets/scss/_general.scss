@@ -43,7 +43,7 @@ ul {
 
 a {
   outline: 0;
-  color: $white;
+  color: currentColor;
   text-decoration: none;
   background-color: transparent;
 }
@@ -53,17 +53,17 @@ a {
 }
 
 .container {
+  position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1890px;
   margin: 0 auto;
-  flex-direction: column;
-  position: relative;
   padding: 0 25px;
 }
 
 .hide-sm {
-  @media (max-width: $screen-sm - 0.5) {
+  @media (max-width: #{$screen-sm - 0.5px}) {
     display: none;
   }
 }
