@@ -9,47 +9,9 @@
   }
 
   .header {
-    padding: 36px 0;
+    padding: 20px 0;
   }
 }
 
-.section {
-  position: relative;
-  margin: 0 -25px;
-  padding: 0 0 216%;
-  outline: 1px solid #00f;
-  background: bottom no-repeat;
-
-  &[data-order="1"] {
-    background-image: url("~/assets/images/checklist/bg-1.png");
-    background-position-x: 85%;
-    background-size: 225%;
-  }
-}
-
-.content {
-  position: absolute;
-  top: 9%;
-  left: 9%;
-  right: 9%;
-
-  h3 {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 1em;
-    font-size: 36px;
-    font-weight: 700;
-
-    small {
-      font-size: 0.5em;
-      font-weight: 300;
-      margin: 0 0 0.65em;
-    }
-  }
-}
-
-.box {
-  border: 1px solid $black;
-  padding: 35px;
-  background: rgba(255, 255, 255, 0.9);
-}
+@import "./checklist/layout";
+@import "./checklist/step";

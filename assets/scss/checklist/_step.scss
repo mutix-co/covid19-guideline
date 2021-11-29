@@ -1,0 +1,65 @@
+.step {
+  position: relative;
+  padding: 0 0 40px 40px;
+  counter-increment: step;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 13px;
+    bottom: 0;
+    width: 1px;
+    background: $black;
+  }
+  &:first-child::before {
+    top: 5px;
+  }
+
+  &::after {
+    content: "0" counter(step);
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    color: $white;
+    background: $black;
+    border-radius: 4px;
+  }
+}
+
+.step-links {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 78px;
+  margin: 0 0 0 20px;
+  font-size: 12px;
+  line-height: 16px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2px 0;
+    color: #6c6c6c;
+
+    &::after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background: url("~/assets/images/icons/export.png") center no-repeat;
+      background-size: 95%;
+      opacity: 0.55;
+    }
+  }
+}

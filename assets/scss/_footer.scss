@@ -1,6 +1,11 @@
 .footer {
-  .container {
+  padding: 15px 0;
 
+  @media (min-width: $screen-lg) {
+    padding: 25px 0;
+  }
+
+  .container {
     align-items: center;
     justify-content: space-between;
     min-height: 80px;
@@ -32,6 +37,10 @@
   }
 
   @media (min-width: $screen-md) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $screen-lg) {
     font-size: 35px;
   }
 
@@ -41,6 +50,10 @@
     font-weight: 400;
 
     @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
       font-size: 20px;
     }
   }
