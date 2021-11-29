@@ -11,6 +11,26 @@ article {
   padding-bottom: 79px;
 }
 
+.navbar {
+  img {
+    width: 100%;
+  }
+}
+
+.guideline-section-title {
+  font-family: Noto Sans;
+  font-weight: bold;
+  font-size: 3.125rem;
+  color: #000000;
+}
+
+.guideline-section-description {
+  font-family: Noto Sans;
+  font-weight: normal;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
 .communicate {
   counter-increment: communicate;
 
