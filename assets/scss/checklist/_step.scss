@@ -46,12 +46,21 @@
   font-size: 12px;
   line-height: 16px;
 
+  @media (min-width: $screen-md) {
+    width: inherit;
+    flex-direction: row;
+  }
+
   a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 2px 0;
     color: #6c6c6c;
+
+    @media (min-width: $screen-md) {
+      margin: 0 0 0 35px;
+    }
 
     &::after {
       content: "";
@@ -60,6 +69,10 @@
       background: url("~/assets/images/icons/export.png") center no-repeat;
       background-size: 95%;
       opacity: 0.55;
+
+      @media (min-width: $screen-md) {
+        margin-left: 9px;
+      }
     }
   }
 }
