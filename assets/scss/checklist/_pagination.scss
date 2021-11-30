@@ -1,15 +1,18 @@
-.header__button {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  bottom: 0;
-  margin: auto 0;
-  transform: scale(0);
-  transform-origin: right;
-  transition: transform 0.3s;
+@media (max-width: #{$screen-md - 0.5px}) {
+  .header__button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    bottom: 0;
+    margin: auto 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
 
-  body[data-step=""] & {
-    transform: scale(1);
+    body[data-step=""] & {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 }
 
@@ -32,6 +35,14 @@
   pointer-events: none;
   transition: opacity 0.3s;
 
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: calc(100% + 80px);
+    right: 25px;
+    width: 40px;
+    flex-direction: column;
+  }
+
   body:not([data-step=""]) & {
     opacity: 1;
     pointer-events: auto;
@@ -48,8 +59,19 @@
     transform: translate(0, -50%);
     transition: filter 0.3s;
 
-    body[data-step="5.3"] & {
-      filter: invert(1);
+    @media (max-width: #{$screen-md - 0.5px}) {
+      body[data-step="5.3"] & {
+        filter: invert(1);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      height: initial;
+      transform: translate(-50%, 0);
     }
   }
 }
@@ -63,9 +85,35 @@
   font-size: 8px;
   line-height: 23px;
   text-align: center;
+  white-space: nowrap;
   background: $white;
   border-radius: 25px;
   transition: background 0.3s;
+
+  @media (min-width: $screen-md) {
+    width: initial;
+    height: 40px;
+    margin: 0 0 25px;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 39px;
+
+    &:not(.page-small) {
+      align-self: flex-end;
+    }
+
+    &[data-step="5"] {
+      margin: 0;
+    }
+
+    &:not(.page-small)::before {
+      content: "Step ";
+      display: none;
+    }
+    &:hover::before {
+      display: inline;
+    }
+  }
 
   &.page-small {
     width: 10px;
@@ -79,6 +127,19 @@
       margin: 0 0 0 10px;
       opacity: 1;
       pointer-events: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 15px;
+      height: 15px;
+      margin: 15px 0 -40px;
+      padding: 0;
+
+      body[data-step^="5"] & {
+        margin: 15px 0 0;
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 
