@@ -1,0 +1,156 @@
+@media (max-width: #{$screen-md - 0.5px}) {
+  .header__button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    bottom: 0;
+    margin: auto 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    body[data-step=""] & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.menu > label > img {
+  transition: filter 0.3s;
+
+  body[data-step="5.3"] & {
+    filter: invert(1);
+  }
+}
+
+.pagination {
+  position: relative;
+  flex-grow: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: calc(100% + 80px);
+    right: 25px;
+    width: 40px;
+    flex-direction: column;
+  }
+
+  body:not([data-step=""]) & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: currentColor;
+    transform: translate(0, -50%);
+    transition: filter 0.3s;
+
+    @media (max-width: #{$screen-md - 0.5px}) {
+      body[data-step="5.3"] & {
+        filter: invert(1);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      width: 1px;
+      height: initial;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.page {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 auto;
+  border: 1px solid;
+  font-size: 8px;
+  line-height: 23px;
+  text-align: center;
+  white-space: nowrap;
+  background: $white;
+  border-radius: 25px;
+  transition: background 0.3s;
+
+  @media (min-width: $screen-md) {
+    width: initial;
+    height: 40px;
+    margin: 0 0 25px;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 39px;
+
+    &:not(.page-small) {
+      align-self: flex-end;
+    }
+
+    &[data-step="5"] {
+      margin: 0;
+    }
+
+    &:not(.page-small)::before {
+      content: "Step ";
+      display: none;
+    }
+    &:hover::before {
+      display: inline;
+    }
+  }
+
+  &.page-small {
+    width: 10px;
+    height: 10px;
+    margin: 0 -20px 0 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: margin 0.3s, opacity 0.3s;
+
+    body[data-step^="5"] & {
+      margin: 0 0 0 10px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 15px;
+      height: 15px;
+      margin: 15px 0 -40px;
+      padding: 0;
+
+      body[data-step^="5"] & {
+        margin: 15px 0 0;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  body[data-step="1"] &[data-step="1"],
+  body[data-step="2"] &[data-step="2"],
+  body[data-step="3"] &[data-step="3"],
+  body[data-step="4"] &[data-step="4"],
+  body[data-step^="5"] &[data-step="5"],
+  body[data-step="5.1"] &[data-step="5.1"],
+  body[data-step="5.2"] &[data-step="5.2"],
+  body[data-step="5.3"] &[data-step="5.3"] {
+    background: $blue;
+  }
+}
