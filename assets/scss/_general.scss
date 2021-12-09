@@ -63,13 +63,13 @@ a {
 }
 
 .hide-sm {
-  @media (max-width: #{$screen-sm - 0.5px}) {
-    display: none;
+  @media (max-width: #{$screen-md - 0.5px}) {
+    display: none !important;
   }
 }
 
 .hide-md {
-  @media (min-width: $screen-sm) {
-    display: none;
+  @media (min-width: $screen-md) {
+    display: none !important;
   }
 }

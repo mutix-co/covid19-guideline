@@ -1,0 +1,131 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 30px;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  margin: 0 10px;
+  padding: 11px 0 10px;
+  border: 1px solid;
+  font-size: 14px;
+  border-radius: 2em;
+  background: transparent;
+  cursor: pointer;
+  transition: filter 0.3s;
+
+  .tabs[data-tab="1"] &[data-tab="2"],
+  .tabs[data-tab="2"] &[data-tab="1"] {
+    filter: grayscale(1) opacity(0.5);
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.tab__content {
+  flex-shrink: 0;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 30px 0 10px;
+
+  @media (max-width: #{$screen-md - 0.5px}) {
+    display: none;
+
+    .tabs[data-tab="1"] ~ &[data-tab="1"],
+    .tabs[data-tab="2"] ~ &[data-tab="2"] {
+      display: block;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &.tab__content--half {
+    @media (min-width: $screen-sm) {
+      max-width: 420px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 40%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 45%;
+    }
+  }
+}
+
+
+
+.colors-text {
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 4em;
+  margin: 0 0.5em 0 0;
+  font-weight: 700;
+
+  @media (min-width: 360px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-left: -0.95em;
+  }
+
+  small {
+    font-size: 0.8em;
+  }
+}
+
+.colors {
+  display: flex;
+  height: 60px;
+  font-size: 40px;
+
+  @media (min-width: $screen-sm) {
+    height: 75px;
+    font-size: 45px;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 90px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 100px;
+    font-size: 135px;
+  }
+
+  @media (min-width: $screen-xl) {
+    height: 100px;
+    font-size: 175px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    font-size: 210px;
+  }
+
+  span {
+    width: 1em;
+    margin: 0 2px;
+    border: 1px solid;
+
+    &[style] {
+      border: 0;
+    }
+  }
+}

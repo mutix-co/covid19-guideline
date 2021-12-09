@@ -1,7 +1,9 @@
-nav {
+.guideline-nav {
   align-self: stretch;
   display: flex;
   text-align: center;
+  max-width: $screen-xxl;
+  margin: 0 auto;
 
   a {
     flex-grow: 1;
