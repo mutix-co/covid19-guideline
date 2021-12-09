@@ -13,4 +13,12 @@ body.addEventListener('click', (event) => {
   if (toggle) {
     toggle.classList.toggle('active');
   }
+
+  const slideButton = event.target.closest('.slider-button');
+  if (slideButton) {
+    const box = slideButton.parentElement;
+    const direction = slideButton.dataset.slide;
+    const nextOffset = (parseInt(box.dataset.offset, 10) + parseInt(direction, 10) + 3) % 3;
+    box.dataset.offset = nextOffset;
+  }
 });

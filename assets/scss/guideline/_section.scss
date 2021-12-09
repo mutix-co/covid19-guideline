@@ -10,6 +10,10 @@
   font-size: 18px;
   font-weight: 400;
 
+  @media (min-width: $screen-md) {
+    padding-top: 120px;
+  }
+
   p {
     margin: 0;
   }
@@ -110,6 +114,42 @@
 
 
 
+.section__block {
+  padding: 50px 0;
+
+  @media(min-width: $screen-md) {
+    padding: 90px 0;
+  }
+
+  @media(min-width: $screen-lg) {
+    padding: 120px 0;
+  }
+
+  .container {
+    @media(min-width: $screen-md) {
+      width: 90%;
+      max-width: $screen-xl;
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 28px;
+
+    @media(min-width: $screen-sm) {
+      font-size: 36px;
+    }
+
+    @media(min-width: $screen-md) {
+      font-size: 42px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 50px;
+    }
+  }
+}
+
 .section__content {
   display: none;
   max-width: $screen-xxl;
@@ -202,5 +242,134 @@
 
   li {
     margin: 0 0 1em;
+  }
+}
+
+
+
+.bar {
+  margin: 30px calc(50% - 50vw) 10px;
+  font-size: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: calc(5% + 25px);
+    height: 1px;
+  }
+
+  img {
+    height: 150px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      height: 200px;
+    }
+  }
+}
+
+.modal-button {
+  display: block;
+  width: 185px;
+  margin: 15px 0 0;
+  border: 1px solid;
+  padding: 13px 0 12px;
+  font-size: 14px;
+  background: transparent;
+  border-radius: 10em;
+  cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 0 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 250px;
+    margin: 3px 0 0;
+    padding: 18px 0 17px;
+    font-size: 20px;
+  }
+}
+
+
+
+.suggestions {
+  counter-reset: order;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul {
+    @media (min-width: $screen-md) {
+      width: 60%;
+    }
+  }
+
+  span {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  small {
+    margin-left: 1em;
+    font-size: 14px;
+  }
+
+  li {
+    counter-increment: order;
+
+    position: relative;
+    margin: 0 0 25px;
+    padding: 0 0 0 50px;
+
+    &::before {
+      content: "0" counter(order) ".";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
+}
+
+.suggestions__paper {
+  border: 1px solid;
+  padding: 16px;
+  font-weight: 700;
+  text-align: center;
+  background: $white;
+
+  @media (min-width: $screen-md) {
+    flex-shrink: 0;
+    width: 30%;
+    max-width: 500px;
+    margin: -5% 0 0 30px;
+  }
+
+  span {
+    margin: 0 0 20px;
+    text-align: left;
+  }
+
+  p + p {
+    &::before {
+      content: "+";
+      display: block;
+      margin: 10px 0;
+      font-size: 40px;
+    }
   }
 }

@@ -3,6 +3,21 @@
 @import "./footer";
 @import "./button";
 
+.bg-yellow {
+  background: $yellow;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+
+  body:not([data-step=""]) & {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .icon {
   flex-shrink: 0;
   display: inline-block;
@@ -49,5 +64,6 @@ article {
 @import "./guideline/pagination";
 @import "./guideline/nav";
 @import "./guideline/section";
+@import "./guideline/slider";
 @import "./guideline/tab";
 @import "./guideline/case";
