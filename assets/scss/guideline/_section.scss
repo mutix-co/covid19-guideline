@@ -312,10 +312,12 @@
   ul {
     @media (min-width: $screen-md) {
       width: 60%;
+      margin-left: -15px;
+      white-space: nowrap;
     }
   }
 
-  span {
+  b {
     display: block;
     margin: 0 0 5px;
     font-size: 25px;
@@ -323,8 +325,12 @@
   }
 
   small {
-    margin-left: 1em;
+    display: block;
     font-size: 14px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 1em;
+    }
   }
 
   li {
@@ -359,7 +365,7 @@
     margin: -5% 0 0 30px;
   }
 
-  span {
+  b {
     margin: 0 0 20px;
     text-align: left;
   }
