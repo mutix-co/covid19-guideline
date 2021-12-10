@@ -21,9 +21,9 @@
     @media (min-width: $screen-md) {
       padding: 30px;
 
-      &:nth-child(2) {
-        transform: translate(1em, -1em);
-      }
+      // &:nth-child(2) {
+      //   transform: translate(1em, -1em);
+      // }
     }
 
     @media (min-width: $screen-lg) {
