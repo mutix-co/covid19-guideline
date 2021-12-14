@@ -2,6 +2,12 @@ const docEl = document.documentElement;
 const body = document.querySelector('body');
 
 body.addEventListener('click', (event) => {
+  const modalButton = event.target.closest('.modal-button, .modal__close');
+  if (modalButton) {
+    body.classList.toggle('with-modal');
+    return;
+  }
+
   const tab = event.target.closest('.tab');
   if (tab) {
     const tabKey = tab.dataset.tab;
@@ -12,6 +18,7 @@ body.addEventListener('click', (event) => {
   const toggle = event.target.closest('.section__toggle');
   if (toggle) {
     toggle.classList.toggle('active');
+    return;
   }
 
   const slideButton = event.target.closest('.slider-button');

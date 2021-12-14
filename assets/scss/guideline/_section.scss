@@ -272,32 +272,6 @@
   }
 }
 
-.modal-button {
-  display: block;
-  width: 185px;
-  margin: 15px 0 0;
-  border: 1px solid;
-  padding: 13px 0 12px;
-  font-size: 14px;
-  background: transparent;
-  border-radius: 10em;
-  cursor: pointer;
-
-  @media (min-width: $screen-md) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 5px 0 0;
-  }
-
-  @media (min-width: $screen-lg) {
-    width: 250px;
-    margin: 3px 0 0;
-    padding: 18px 0 17px;
-    font-size: 20px;
-  }
-}
-
 
 
 .suggestions {
