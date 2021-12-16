@@ -34,12 +34,47 @@
   margin: 0 0 0 auto;
   border: 1px solid;
   font-size: 8px;
+  font-weight: 400;
   line-height: 23px;
   text-align: center;
   white-space: nowrap;
   background: $white;
-  border-radius: 25px;
+  border-radius: 10em;
   transition: background 0.3s;
+
+  &:not(.page-small) {
+    @media (min-width: $screen-sm) {
+      width: 40px;
+      height: 40px;
+      font-size: 13px;
+      line-height: 38px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      line-height: 48px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      width: initial;
+      padding: 0 50px;
+      font-size: 28px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &::before {
+        content: "Step";
+      }
+    }
+  }
 
   &.page-small {
     width: 10px;
@@ -49,11 +84,31 @@
     pointer-events: none;
     transition: margin 0.3s, opacity 0.3s;
 
+    body[data-step=""] &[data-step^="1"],
     body[data-step^="1"] &[data-step^="1"],
     body[data-step^="2"] &[data-step^="2"] {
       margin: 0 0 0 10px;
       opacity: 1;
       pointer-events: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 30px;
+      height: 30px;
+      margin: 0 -50px 0 10px;
+
+      body[data-step=""] &[data-step^="1"],
+      body[data-step^="1"] &[data-step^="1"],
+      body[data-step^="2"] &[data-step^="2"] {
+        margin: 0 0 0 10px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 30px;
+      height: 30px;
     }
   }
 
