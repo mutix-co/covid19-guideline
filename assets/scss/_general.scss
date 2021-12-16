@@ -67,6 +67,10 @@ button {
   padding: 0 25px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .hide-sm {
   @media (max-width: #{$screen-md - 0.5px}) {
     display: none !important;
