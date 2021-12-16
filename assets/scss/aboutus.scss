@@ -1,37 +1,102 @@
 @import "./general";
 @import "./header";
 @import "./button";
+@import "./footer";
 
-.aboutus--title {
-  font-weight: bold;
-  font-size: 3rem;
+main {
+  min-height: calc(100vh - 240px);
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    width: 90% !important;
+  }
+
+  @media (min-width: $screen-lg) {
+    text-align: left;
+  }
 }
 
-.aboutus--description {
-  font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm) {
+    font-size: 70px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 48px;
+    text-transform: none;
+  }
+
+  small {
+    display: block;
+    font-size: 0.5em;
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+      font-size: 1em;
+    }
+  }
 }
 
-.aboutus--image {
-  position: absolute;
-  right: 25px;
-  bottom: 0;
-  width: 682px;
+.description {
+  font-size: 18px;
+  font-weight: 400;
+
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  br {
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+}
+
+.about {
+  @media (min-width: $screen-lg) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 50px 0 70px;
+  }
+
+  img {
+    width: 328px;
+    max-width: 100%;
+    margin: 40px auto 90px;
+
+    @media (min-width: $screen-lg) {
+      order: 2;
+      margin: 0 0 20px 30px;
+    }
+  }
 }
 
 .team {
-  margin-top: 300px;
-}
+  margin: 0 0 30px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 3;
 
-.team--title {
-  font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
-}
+  @media (min-width: $screen-sm) {
+    font-size: 14px;
+  }
 
-.team--detail {
-  font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+  }
 }
