@@ -15,7 +15,7 @@ body.addEventListener('click', (event) => {
     return;
   }
 
-  const toggle = event.target.closest('.section__toggle');
+  const toggle = event.target.closest('.toggle');
   if (toggle) {
     toggle.classList.toggle('active');
     return;

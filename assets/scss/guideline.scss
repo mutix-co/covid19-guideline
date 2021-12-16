@@ -7,6 +7,10 @@
   background: $yellow;
 }
 
+.bg-blue {
+  background: $blue;
+}
+
 .header {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
@@ -69,3 +73,43 @@ article {
 @import "./guideline/case";
 @import "./guideline/modal";
 @import "./guideline/list";
+
+.img--main {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto 0;
+
+  @media (min-width: $screen-md) {
+    margin: 20px auto 50px;
+  }
+}
+
+.section--description {
+  position: relative;
+
+  @media (min-width: $screen-lg) {
+    min-height: 380px;
+  }
+
+  .container {
+    position: static;
+
+    @media(min-width: $screen-md) {
+      padding-right: 50%;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 50px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-width: 45%;
+      margin: 0;
+    }
+  }
+}

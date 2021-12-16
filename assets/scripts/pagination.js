@@ -36,7 +36,7 @@ function updateStep() {
   for (let i = list.length - 1; i >= 0; i--) {
     const { step, top } = list[i];
 
-    if (top <= scrollTop + 10) {
+    if (top <= scrollTop + 50) {
       nextStep = step;
       break;
     }

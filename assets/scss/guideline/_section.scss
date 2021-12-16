@@ -11,7 +11,11 @@
   font-weight: 400;
 
   @media (min-width: $screen-md) {
-    padding-top: 120px;
+    padding-top: 100px;
+  }
+
+  &.no-padding {
+    padding: 0 !important;
   }
 
   p {
@@ -296,6 +300,14 @@
     margin: 0 0 5px;
     font-size: 25px;
     font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 25px;
+    }
   }
 
   small {
