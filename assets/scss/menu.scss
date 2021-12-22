@@ -103,10 +103,6 @@
       font-size: 72px;
     }
 
-    &:hover {
-      filter: drop-shadow(5px 5px $yellow);
-    }
-
     &::after {
       content: "";
       width: 0.8em;
