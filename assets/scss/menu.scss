@@ -86,7 +86,8 @@
     align-items: center;
     height: 70px;
     font-size: 24px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $black;
+    transition: color 0.3s;
 
     @media (min-width: $screen-sm) {
       height: 84px;
@@ -101,6 +102,10 @@
     @media (min-width: $screen-lg) {
       height: 185px;
       font-size: 72px;
+
+      &:hover {
+        color: $yellow;
+      }
     }
 
     &::after {

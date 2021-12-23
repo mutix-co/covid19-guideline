@@ -3,10 +3,18 @@
 @import "./button";
 
 body {
-  padding: 135px 0 30px;
+  padding: 180px 0 0;
+
+  @media (min-width: $screen-sm) {
+    padding: 220px 0 0;
+  }
 
   &::before {
     content: "";
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
     display: block;
     height: 140px;
     background: url(~/assets/images/header-bg.png) repeat-x;
@@ -24,7 +32,7 @@ body {
 }
 
 .header {
-  padding: 36px 0;
+  padding: 0;
 }
 
 .logo {
