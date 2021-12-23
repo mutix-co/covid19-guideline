@@ -15,24 +15,18 @@ body {
     top: 80px;
     left: 0;
     right: 0;
+    z-index: 1;
     display: block;
-    height: 140px;
+    height: 90px;
     background: url(~/assets/images/header-bg.png) repeat-x;
     background-position: top center;
     background-size: 142px 90px;
-
-    @media (-webkit-min-device-pixel-ratio: 2) {
-      background-image: url(~/assets/images/header-bg@2x.png);
-    }
-
-    @media (-webkit-min-device-pixel-ratio: 4) {
-      background-image: url(~/assets/images/header-bg@4x.png);
-    }
   }
 }
 
 .header {
   padding: 0;
+  background: $white;
 }
 
 .logo {
